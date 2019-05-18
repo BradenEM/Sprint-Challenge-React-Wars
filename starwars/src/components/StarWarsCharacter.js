@@ -2,7 +2,7 @@ import React from "react";
 import "./StarWars.css";
 
 function capFirstLetter(string) {
-  if (string.charAt(0) === "n") {
+  if (string === "n/a") {
     return string.toUpperCase();
   } else {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -21,7 +21,7 @@ const StarWarsCharacter = props => {
           </p>
           <p className="info-p">
             <strong>Birth Year: </strong>
-            {props.item.birth_year}
+            {capFirstLetter(props.item.birth_year)}
           </p>
           <p className="info-p">
             <strong>Height: </strong>
